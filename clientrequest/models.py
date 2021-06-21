@@ -9,7 +9,8 @@ class BrandAuto (models.Model):
 
 
 class ModelAuto (models.Model):
-    model_auto = models.ForeignKey(BrandAuto,on_delete=models.CASCADE)
+    brandauto = models.ForeignKey(BrandAuto,on_delete=models.CASCADE)
+    model_auto = models.CharField(max_length=50)
 
     def __str__(self):
         return self.model_auto
