@@ -14,3 +14,15 @@ class ModelAuto (models.Model):
 
     def __str__(self):
         return self.model_auto
+
+
+class ClientRequest (models.Model):
+    client_name = models.CharField (max_length=30)
+    brandauto = models.OneToOneField (BrandAuto, on_delete=models.CASCADE)
+    modelauto = models.OneToOneField (ModelAuto, on_delete=models.CASCADE)
+    year_auto = models.CharField (max_length=4)
+    client_request = models.TextField ()
+    client_phone = models.CharField (max_length=13)
+
+    def __str__(self):
+        return self.client_name
