@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 class BrandAuto (models.Model):
@@ -18,11 +19,14 @@ class ModelAuto (models.Model):
 
 class ClientRequest (models.Model):
     client_name = models.CharField (max_length=30)
-    brandauto = models.OneToOneField (BrandAuto, on_delete=models.CASCADE)
-    modelauto = models.OneToOneField (ModelAuto, on_delete=models.CASCADE)
+    brandauto = models.ForeignKey (BrandAuto, on_delete=models.CASCADE)
+    modelauto = models.ForeignKey (ModelAuto, on_delete=models.CASCADE)
     year_auto = models.CharField (max_length=4)
     client_request = models.TextField ()
     client_phone = models.CharField (max_length=13)
 
     def __str__(self):
         return self.client_name
+
+    def get_absolute_url (self):
+        return reverse('home')
