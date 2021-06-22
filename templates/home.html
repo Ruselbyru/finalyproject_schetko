@@ -2,12 +2,27 @@
 
 {% block content %}
 <h1>New request</h1>
-<form method="post" action="">
+{% load crispy_forms_tags %}
+<form method="post" action="" >
     <div class="container">
         {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="Save">
+        {{ form | crispy }}
+        <button class="btn btn-success" type="submit">Save</button>
     </div>
 </form>
-
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+    $("#id_brandauto").change(function() {
+        var brand = $(this).val()
+    $.ajax({
+      url: "/model_for_brand/",
+      data: {
+        'brandauto': brand
+      },
+      success: function (data) {
+        $("#id_modelauto").html (data);
+      }
+    });
+  });
+</script>
 {% endblock %}
