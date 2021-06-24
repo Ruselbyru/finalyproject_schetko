@@ -14,9 +14,9 @@ class ClientRequestCreateView (CreateView):
 def models_for_brand (request):
     if request.GET.get ('brandauto'):
         brand = int(request.GET.get ('brandauto'))
-        models = BrandAuto.objects.get (id=brand).modelauto_set.all()
+        models = ModelAuto.objects.filter (brandauto_id=brand)
     else:
-        models = []
+        models = [None]
     return render (request, 'model_for_brand.html',{'models':models})
 
 

@@ -9,14 +9,16 @@ class ClientRequestForm(forms.ModelForm):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self.fields['modelauto'].queryset = ModelAuto.objects.none()
+        # print(self.fields['brandauto'].label)
+        # self.fields['modelauto'].queryset = ModelAuto.objects.filter(brandauto_id=1)
 
-    def save(self, commit=True):
-        super().save(self,commit)
-        brand = int(self.fields['brandauto'].value)
-        brand = BrandAuto.objects.get (id= brand)
-        model = int(self.fields['modelauto'].value)
-        model = ModelAuto.objects.get (id= model)
-        brand_models = brand.modelauto_set.all()
-        if model not in brand_models:
-            return TypeError
+
+    # def save(self, commit=True):
+    #     super().save(self)
+    #     brand = int(self.fields['brandauto'].value)
+    #     brand = BrandAuto.objects.get (id= brand)
+    #     model = int(self.fields['modelauto'].value)
+    #     model = ModelAuto.objects.get (id= model)
+    #     brand_models = brand.modelauto_set.all()
+    #     if model not in brand_models:
+    #         return TypeError
