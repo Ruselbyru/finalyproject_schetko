@@ -8,7 +8,7 @@ from .forms import ClientRequestForm
 
 class ClientRequestCreateView (CreateView):
     model = ClientRequest
-    template_name = 'home.html'
+    template_name = 'Clientrequest.html'
     form_class = ClientRequestForm
 
 def models_for_brand (request):
