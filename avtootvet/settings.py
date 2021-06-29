@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     #my
     'clientrequest',
     'shoprequest',
+    'telegram_bot',
 ]
 
 MIDDLEWARE = [
@@ -130,3 +131,8 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CRISPY_TEMPLATE_PACK =  'bootstrap4'
+
+
+#bot_settings
+TOKEN = '1814873441:AAEsaxbtbW7M0VxHMm9b2r77z5-7Xoaa7e4'
+PROXY_URL  = 'https://telegg.ru/orig/bot'

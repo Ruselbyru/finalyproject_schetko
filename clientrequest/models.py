@@ -18,12 +18,12 @@ class ModelAuto (models.Model):
 
 
 class ClientRequest (models.Model):
-    client_name = models.CharField (max_length=30)
-    brandauto = models.ForeignKey (BrandAuto, on_delete=models.CASCADE)
-    modelauto = models.ForeignKey (ModelAuto, on_delete=models.CASCADE)
-    year_auto = models.CharField (max_length=4)
-    client_request = models.TextField ()
-    client_phone = models.CharField (max_length=13)
+    client_name = models.CharField (verbose_name='Имя', max_length=30)
+    brandauto = models.ForeignKey (BrandAuto, verbose_name='Марка автомобиля', on_delete=models.CASCADE)
+    modelauto = models.ForeignKey (ModelAuto, verbose_name='Модель автомобиля', on_delete=models.CASCADE)
+    year_auto = models.CharField (verbose_name='Год выпуска автомобиля', max_length=4)
+    client_request = models.TextField (verbose_name='Запчасти')
+    client_phone = models.CharField (verbose_name='Телефон', max_length=13)
 
     def __str__(self):
         return self.client_name
