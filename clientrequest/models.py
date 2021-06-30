@@ -29,4 +29,4 @@ class ClientRequest (models.Model):
         return self.client_name
 
     def get_absolute_url (self):
-        return reverse('home')
+        return reverse('clientrequest')
