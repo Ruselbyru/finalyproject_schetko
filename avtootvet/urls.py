@@ -20,5 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('clientrequest.urls')),
     path('', include('shoprequest.urls')),
+    path('', include('telegram_bot.urls')),
 
 ]

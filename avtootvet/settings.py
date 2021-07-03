@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-sc6()71r&h1ll($(qa@x5247jwis8m+n2)@amb&s(ntdg+#551
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -131,6 +131,9 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CRISPY_TEMPLATE_PACK =  'bootstrap4'
+
+CSRF_COOKIE_AGE = 31449600
+CSRF_COOKIE_SECURE = True
 
 
 #bot_settings
