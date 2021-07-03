@@ -6,7 +6,7 @@ import json
 URL = f'https://api.telegram.org/bot{settings.TOKEN}/'
 
 def write_json(data, filename = 'answer.json'):
-    with open(filename, 'w', encoding='utf-8') as f:
+    with open(f'static/{filename}', 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
 
 def get_updates():

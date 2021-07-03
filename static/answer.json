@@ -1,0 +1,21 @@
+{
+  "update_id": 684336152,
+  "message": {
+    "message_id": 283,
+    "from": {
+      "id": 586349284,
+      "is_bot": false,
+      "first_name": "R",
+      "username": "ruselbyru",
+      "language_code": "ru"
+    },
+    "chat": {
+      "id": 586349284,
+      "first_name": "R",
+      "username": "ruselbyru",
+      "type": "private"
+    },
+    "date": 1625348324,
+    "text": "пол"
+  }
+}
