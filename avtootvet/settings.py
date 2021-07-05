@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-sc6()71r&h1ll($(qa@x5247jwis8m+n2)@amb&s(ntdg+#551'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -90,9 +90,9 @@ WSGI_APPLICATION = 'avtootvet.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'da6tl5aj5jrs4c',
-        'USER': 'kdkmcyftdicjal',
-        'PASSWORD': '61624e6c2f80cabf699c57512ad631b373ccbe7849f46568e9e463f90dc819a6',
+        'NAME': os.environ.get('DB_NAME'),
+        'USER': os.environ.get('DB_USER')',
+        'PASSWORD': os.environ.get('DB_PASSWORD')',
         'HOST': 'ec2-54-228-174-49.eu-west-1.compute.amazonaws.com',
         'PORT': '5432',
     }
@@ -153,4 +153,4 @@ CSRF_COOKIE_SECURE = True
 
 
 #bot_settings
-TOKEN = '1814873441:AAEsaxbtbW7M0VxHMm9b2r77z5-7Xoaa7e4'
+TOKEN = os.environ.get('BOT_TOKEN')
