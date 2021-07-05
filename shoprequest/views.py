@@ -8,3 +8,6 @@ class ShoprequestView (CreateView):
     model = Shoprequest
     template_name = 'Shoprequest.html'
     fields = '__all__'
+
+def goodshop (reaquest):
+    return render(reaquest, 'goodshop.html')

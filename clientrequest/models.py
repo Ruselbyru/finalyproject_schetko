@@ -30,7 +30,7 @@ class ClientRequest (models.Model):
         return self.client_name
 
     def get_absolute_url (self):
-        return reverse('clientrequest')
+        return reverse('goodrequest')
 
     class Meta:
         verbose_name = 'Заказ'

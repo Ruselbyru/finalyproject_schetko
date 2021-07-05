@@ -24,6 +24,9 @@ def models_for_brand (request):
         models = [None]
     return render (request, 'model_for_brand.html',{'models':models})
 
+def goodrequest (reaquest):
+    return render(reaquest, 'goodrequest.html')
+
 
 # Cлушаем сигнал о сохранении в БД Заявки и обрабатываем,
 # Вызова фн, рассылки с проверкой состояния подписки на данную рассылку в Телеграме.

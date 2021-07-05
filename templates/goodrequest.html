@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card text-center position-absolute top-50 start-50 translate-middle">
+  <div class="card-header">
+    Успех!
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Заявка успешно оставлена</h5>
+    <p class="card-text">Меннеджеры магазинов в ближайшее время с Вами свяжутся</p>
+    <a href="{% url 'home' %}" class="btn btn-primary">На Главную</a>
+  </div>
+  <div class="card-footer text-muted">
+
+  </div>
+</div>
+{% endblock %}

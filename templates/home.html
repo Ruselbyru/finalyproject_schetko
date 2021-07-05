@@ -2,5 +2,24 @@
 
 {% block content %}
 {% csrf_token %}
-<h1>Home</h1>
+<div class="row position-absolute top-50 start-50 translate-middle">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Я клиент</h5>
+        <p class="card-text">Нажмите на кнопку ниже и оставьте заявку!</p>
+        <a href="{% url 'clientrequest' %}" class="btn btn-primary">Клиент</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Я владелец магазина</h5>
+        <p class="card-text">Нажмите на кнопку ниже и внесите данные о своем магазине!</p>
+        <a href="{% url 'shoprequest' %}" class="btn btn-primary">Магазин</a>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}

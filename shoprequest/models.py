@@ -15,7 +15,7 @@ class Shoprequest (models.Model):
         return self.shopname
 
     def get_absolute_url (self):
-        return reverse('shoprequest')
+        return reverse('goodshop')
 
     class Meta:
         verbose_name = 'Магазин'
