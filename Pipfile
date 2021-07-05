@@ -10,6 +10,7 @@ python-telegram-bot = "*"
 pytelegrambotapi = "*"
 psycopg2 = "*"
 gunicorn = "*"
+whitenoise = "*"
 
 [dev-packages]
 

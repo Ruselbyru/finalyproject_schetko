@@ -55,5 +55,5 @@ def subscribe (chat_id):
 
 
 
-# https://api.telegram.org/bot1814873441:AAEsaxbtbW7M0VxHMm9b2r77z5-7Xoaa7e4/setWebhook?url=https://06e0642cf238.ngrok.io
+# https://api.telegram.org/bot1814873441:AAEsaxbtbW7M0VxHMm9b2r77z5-7Xoaa7e4/setWebhook?url=https://avtootvet.herokuapp.com
 # https://api.telegram.org/bot1814873441:AAEsaxbtbW7M0VxHMm9b2r77z5-7Xoaa7e4/deleteWebhook
