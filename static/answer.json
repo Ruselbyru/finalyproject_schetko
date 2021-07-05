@@ -1,7 +1,7 @@
 {
-  "update_id": 684336152,
+  "update_id": 684336404,
   "message": {
-    "message_id": 283,
+    "message_id": 806,
     "from": {
       "id": 586349284,
       "is_bot": false,
@@ -15,7 +15,14 @@
       "username": "ruselbyru",
       "type": "private"
     },
-    "date": 1625348324,
-    "text": "пол"
+    "date": 1625480302,
+    "text": "/subscribe",
+    "entities": [
+      {
+        "offset": 0,
+        "length": 10,
+        "type": "bot_command"
+      }
+    ]
   }
 }

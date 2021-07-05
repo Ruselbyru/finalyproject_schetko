@@ -2,13 +2,14 @@ from django.db import models
 from django.urls import reverse
 
 # Create your models here.
+# Модель БД марок авто
 class BrandAuto (models.Model):
     brand_auto = models.CharField(max_length=50)
 
     def __str__(self):
         return self.brand_auto
 
-
+# Модель БД моделей авто
 class ModelAuto (models.Model):
     brandauto = models.ForeignKey(BrandAuto,on_delete=models.CASCADE)
     model_auto = models.CharField(max_length=50)
@@ -16,7 +17,7 @@ class ModelAuto (models.Model):
     def __str__(self):
         return self.model_auto
 
-
+#Модель БД для Магазинов с полями : Имя, Марка, Модель, Год, Текст запроса, Номер
 class ClientRequest (models.Model):
     client_name = models.CharField (verbose_name='Имя', max_length=30)
     brandauto = models.ForeignKey (BrandAuto, verbose_name='Марка автомобиля', on_delete=models.CASCADE)
@@ -30,3 +31,7 @@ class ClientRequest (models.Model):
 
     def get_absolute_url (self):
         return reverse('clientrequest')
+
+    class Meta:
+        verbose_name = 'Заказ'
+        verbose_name_plural = 'Заказы'

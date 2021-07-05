@@ -1,8 +1,9 @@
 from django.db import models
 from django.urls import reverse
 
-# Create your models here.
 
+# Create your models here.
+#Модель БД для Магазинов с полями : Наименование, Владелец, Номер, Почта, УНП
 class Shoprequest (models.Model):
     shopname = models.CharField(verbose_name='Наименование магазина', max_length=100)
     firstname_lastname = models.CharField(verbose_name='Имя и фамилия владельца', max_length=100)
@@ -15,3 +16,7 @@ class Shoprequest (models.Model):
 
     def get_absolute_url (self):
         return reverse('shoprequest')
+
+    class Meta:
+        verbose_name = 'Магазин'
+        verbose_name_plural = 'Магазины'
